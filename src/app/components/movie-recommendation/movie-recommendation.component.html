@@ -1,3 +1,7 @@
-<p>
-  movie-recommendation works!
-</p>
+<div>
+  <div *ngFor="let movie of similarMovies" >
+    {{movie.id}}
+    {{movie.title}}
+    {{movie.genres}}
+  </div>
+</div>
