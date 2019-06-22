@@ -14,6 +14,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { MovieGridComponent } from './components/movie-grid/movie-grid.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MovieCardComponent } from './components/movie-card/movie-card.component
     MovieListComponent,
     LoginComponent,
     HomeComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    MovieGridComponent
 
   ],
   imports: [
