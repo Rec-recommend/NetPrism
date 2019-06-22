@@ -13,6 +13,7 @@ import { LoginService } from './services/login.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,9 @@ import { HomeComponent } from './components/home/home.component';
     MovieRecommendationComponent,
     MovieListComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MovieCardComponent
+
   ],
   imports: [
     BrowserModule,
