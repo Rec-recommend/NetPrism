@@ -1,14 +1,6 @@
 <div>
-  <div *ngFor="let movie of similarMovies" >
-    {{movie?.id}}
-    {{movie?.title}}
-    {{movie?.genres}}
-  </div>
+  <app-movie-list [movies]="similarMovies"></app-movie-list>
   <br>
   <hr>
-  <div *ngFor="let movie of userRecommendations" >
-    {{movie?.id}}
-    {{movie?.title}}
-    {{movie?.genres}}
-  </div>
+  <app-movie-list [movies]="userRecommendations"></app-movie-list>
 </div>
