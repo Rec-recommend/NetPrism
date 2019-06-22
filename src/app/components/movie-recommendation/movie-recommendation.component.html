@@ -1,8 +1,6 @@
 <div>
-  <div *ngFor="let movie of similarMovies" >
-    {{movie?.id}}
-    {{movie?.title}}
-    {{movie?.genres}}
-    <img src="{{movie?.poster}}"/>
-  </div>
+  <app-movie-list [movies]="similarMovies"></app-movie-list>
+  <br>
+  <hr>
+  <app-movie-list [movies]="userRecommendations"></app-movie-list>
 </div>

@@ -9,19 +9,26 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MovieService } from './services/movie.service';
 import { GoogleService } from './services/google.service';
 import { RecommendationService } from './services/recommendation.service';
+import { LoginService } from './services/login.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieShowComponent,
     MovieRecommendationComponent,
-    MovieListComponent
+    MovieListComponent,
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
-  providers: [MovieService, GoogleService, RecommendationService],
+  providers: [MovieService, GoogleService, RecommendationService, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
