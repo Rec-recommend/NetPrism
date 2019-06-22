@@ -11,6 +11,7 @@ export class MovieRecommendationComponent implements OnInit {
   @Input() movieId: number;
 
   public similarMovies: Movie[] = [];
+  public userRecommendations: Movie[] = [];
 
   constructor(private recService: RecommendationService) {
   }
@@ -20,6 +21,12 @@ export class MovieRecommendationComponent implements OnInit {
       .fetchSimilarMovies(this.movieId)
       .subscribe(
         movies => this.similarMovies = movies
+      );
+
+    this.recService
+      .fetchUserRecommendations()
+      .subscribe(
+        movies => this.userRecommendations = movies
       );
   }
 

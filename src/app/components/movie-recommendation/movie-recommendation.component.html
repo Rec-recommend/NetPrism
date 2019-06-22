@@ -4,4 +4,11 @@
     {{movie?.title}}
     {{movie?.genres}}
   </div>
+  <br>
+  <hr>
+  <div *ngFor="let movie of userRecommendations" >
+    {{movie?.id}}
+    {{movie?.title}}
+    {{movie?.genres}}
+  </div>
 </div>
