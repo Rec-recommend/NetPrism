@@ -12,6 +12,7 @@ import { RecommendationService } from './services/recommendation.service';
 import { LoginService } from './services/login.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './components/login/login.component';
     MovieShowComponent,
     MovieRecommendationComponent,
     MovieListComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
