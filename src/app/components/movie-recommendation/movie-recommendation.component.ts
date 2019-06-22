@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RecommendationService } from 'src/app/services/recommendation.service';
 import { Movie } from 'src/app/models/movie';
 
@@ -8,13 +8,19 @@ import { Movie } from 'src/app/models/movie';
   styleUrls: ['./movie-recommendation.component.scss']
 })
 export class MovieRecommendationComponent implements OnInit {
-  public similarMovies: Movie[] = [];
-  constructor(recService: RecommendationService) {
+  @Input() movieId: number;
 
-    recService.fetchSimilarMovies(1).subscribe(movies => this.similarMovies = movies);
+  public similarMovies: Movie[] = [];
+
+  constructor(private recService: RecommendationService) {
   }
 
   ngOnInit() {
+    this.recService
+      .fetchSimilarMovies(this.movieId)
+      .subscribe(
+        movies => this.similarMovies = movies
+      );
   }
 
 }
