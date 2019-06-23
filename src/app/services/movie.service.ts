@@ -10,10 +10,13 @@ export class MovieService {
   constructor() { }
 
   // returns the first 10 elements of the Hashed Movies
-  public head():Movie[]{
-    return Object.values(moviesHash).slice(0,500);
+  public head(max:number = 10 ):Movie[]{
+    return Object.values(moviesHash).slice(0,max);
   }
   
+  public findById(id: number):Movie{
+    return moviesHash[id];
+  }
   public find(ids: number[]) {
     let movies: Movie[] = [];
     try {
