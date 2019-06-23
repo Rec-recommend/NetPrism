@@ -15,6 +15,8 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { MovieGridComponent } from './components/movie-grid/movie-grid.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { MovieGridComponent } from './components/movie-grid/movie-grid.component
     LoginComponent,
     HomeComponent,
     MovieCardComponent,
-    MovieGridComponent
+    MovieGridComponent,
+    HeaderComponent,
+    FooterComponent
 
   ],
   imports: [
