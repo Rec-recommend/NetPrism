@@ -1,8 +1,5 @@
-<div>
-  <div *ngFor="let movie of movies" >
-    {{movie?.id}}
-    {{movie?.title}}
-    {{movie?.genres}}
-    <img src="{{movie?.poster}}"/>
-  </div>
-</div>
+<span *ngFor="let movie of movies">
+    <div class="col-sm-2">
+  <app-movie-card [movie]="movie"></app-movie-card>
+    </div>
+</span>
