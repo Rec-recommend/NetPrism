@@ -22,80 +22,18 @@
                 <a href="#page-top"></a>
               </li>
               <li class="dropdown first">
-                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown">
+                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" routerLink="/movies">
                   Home <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
-                <ul class="dropdown-menu level1">
-                  <li><a href="##">Home 01</a></li>
-                  <li><a href="##">Home 02</a></li>
-                  <li><a href="##">Home 03</a></li>
-                </ul>
               </li>
               <li class="dropdown first">
-                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
+                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown" routerLink="/movies">
                   movies<i class="fa fa-angle-down" aria-hidden="true"></i>
                 </a>
-                <ul class="dropdown-menu level1">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Movie grid<i
-                        class="ion-ios-arrow-forward"></i></a>
-                    <ul class="dropdown-menu level2">
-                      <li><a href="##">Movie grid</a></li>
-                      <li><a href="##">movie grid full width</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="##">Movie list</a></li>
-                  <li><a href="##">Movie single</a></li>
-                  <li class="it-last"><a href="##">Series single</a></li>
-                </ul>
-              </li>
-              <li class="dropdown first">
-                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                  celebrities <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
-                <ul class="dropdown-menu level1">
-                  <li><a href="##">celebrity grid 01</a></li>
-                  <li><a href="##">celebrity grid 02 </a></li>
-                  <li><a href="##">celebrity list</a></li>
-                  <li class="it-last"><a href="##">celebrity single</a></li>
-                </ul>
-              </li>
-              <li class="dropdown first">
-                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                  news <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
-                <ul class="dropdown-menu level1">
-                  <li><a href="##">blog List</a></li>
-                  <li><a href="##">blog Grid</a></li>
-                  <li class="it-last"><a href="##">blog Detail</a></li>
-                </ul>
-              </li>
-              <li class="dropdown first">
-                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                  community <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
-                <ul class="dropdown-menu level1">
-                  <li><a href="##">user favorite grid</a></li>
-                  <li><a href="##">user favorite list</a></li>
-                  <li><a href="##">user profile</a></li>
-                  <li class="it-last"><a href="##">user rate</a></li>
-                </ul>
               </li>
             </ul>
             <ul class="nav navbar-nav flex-child-menu menu-right">
-              <li class="dropdown first">
-                <a class="btn btn-default dropdown-toggle lv1" data-toggle="dropdown" data-hover="dropdown">
-                  pages <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
-                <ul class="dropdown-menu level1">
-                  <li><a href="##">Landing</a></li>
-                  <li><a href="##">404 Page</a></li>
-                  <li class="it-last"><a href="##">Coming soon</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Help</a></li>
-              <li class="loginLink"><a href="#">LOG In</a></li>
-              <li class="btn signupLink"><a href="#">sign up</a></li>
+              <li class="loginLink"><a href="#" data-toggle="modal" data-target="#exampleModalCenter">LOG In</a></li>
             </ul>
           </div>
           <!-- /.navbar-collapse -->
@@ -112,3 +50,20 @@
       </div>
     </header>
     <!-- END | Header -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <app-login></app-login>
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>

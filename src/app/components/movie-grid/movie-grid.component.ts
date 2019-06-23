@@ -14,7 +14,7 @@ export class MovieGridComponent implements OnInit {
   constructor(private movieService:MovieService) { }
 
   ngOnInit() {
-    this.movies = this.movieService.head();
+    this.movies = this.movieService.head(40);
   }
 
 }

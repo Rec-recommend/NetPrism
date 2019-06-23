@@ -1,6 +1,12 @@
 <div>
+    <div class="title-hd">
+        <h2>Similar Items</h2>
+      </div>
   <app-movie-list [movies]="similarMovies"></app-movie-list>
   <br>
   <hr>
+  <div class="title-hd" style="clear: both">
+      <h2>Recommended For You</h2>
+  </div>
   <app-movie-list [movies]="userRecommendations"></app-movie-list>
 </div>
