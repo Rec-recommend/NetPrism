@@ -1,12 +1,10 @@
 <div class="movie-item-style-2 movie-item-style-1">
     <img src="{{movie?.poster}}" onerror="this.src='assets/images/default-poster.jpg';">
   <div class="hvr-inner">
-    <a href="##"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+    <a [routerLink]="['/movies',movie?.id]"> Read more <i class="ion-android-arrow-dropright"></i> </a>
   </div>
   <div class="mv-item-infor">
     <h6><a href="#">{{movie?.title}}</a></h6>
     <p class="rate"><i class="ion-android-star"></i><span>8.1</span> /10</p>
   </div>
 </div>
-<!-- {{movie?.id}} -->
-<!-- {{movie?.genres}} -->

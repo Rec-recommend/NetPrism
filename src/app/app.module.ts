@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieShowComponent } from './components/movie-show/movie-show.component';
@@ -31,7 +31,8 @@ import { MovieGridComponent } from './components/movie-grid/movie-grid.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [MovieService, GoogleService, RecommendationService, LoginService],
   bootstrap: [AppComponent]
