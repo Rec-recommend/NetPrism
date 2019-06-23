@@ -1,9 +1,9 @@
+<a routerLink="/movies/{{movie?.id}}"> 
 <div class="movie-item-style-2 movie-item-style-1">
     <img src="{{movie?.poster}}" onerror="this.src='assets/images/default-poster.jpg';">
-  <div class="hvr-inner">
-    <a routerLink="/movies/{{movie?.id}}"> Read more <i class="ion-android-arrow-dropright"></i> </a>
+    <div class="mv-item-infor">
+      <h6><a routerLink="/movies/{{movie?.id}}">{{ movie?.title | slice:0:15   }} </a></h6>
+      <span>{{movie.genres}}</span>
+    </div>
   </div>
-  <div class="mv-item-infor">
-    <h6><a href="#">{{ movie?.title | slice:0:15   }} </a></h6>
-  </div>
-</div>
+</a>
