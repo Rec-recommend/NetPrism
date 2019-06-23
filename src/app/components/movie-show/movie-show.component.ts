@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/models/movie';
 import { MovieService } from 'src/app/services/movie.service';
+import { RecommendationService } from '../../services/recommendation.service';
 
 @Component({
   selector: 'app-movie-show',
@@ -9,15 +10,20 @@ import { MovieService } from 'src/app/services/movie.service';
   styleUrls: ['./movie-show.component.scss']
 })
 export class MovieShowComponent implements OnInit {
-  public id: number;
   public movie:Movie;
 
-  constructor(private route: ActivatedRoute, private movieService:MovieService) {
-    this.id = this.route.params['value'].id;
-    this.movie = this.movieService.findById(this.id)
-   }
+  constructor(private route: ActivatedRoute, 
+    private movieService:MovieService,
+    private recService:RecommendationService
+  ) {}
 
   ngOnInit() {
+    this.route.params.subscribe(routeParams => {
+      let id = routeParams.id;
+      this.movie = this.movieService.findById(id)
+      this.recService.fetchSimilarMovies(this.movie.id);
+    });
+  
   }
 
 }
