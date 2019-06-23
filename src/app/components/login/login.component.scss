@@ -1,0 +1,34 @@
+.floaty{
+    z-index: 100;
+    opacity: 0.01;
+    position: fixed;
+    bottom: 30%;
+    left: 50px;
+    max-width: 50%;
+    .cont{
+        display: flex;
+        flex-wrap: wrap;
+        .floaty-input{
+            flex: 0 0 66.666667%;
+        }
+        .floaty-btn{
+            color: white;
+            display: inline;
+            max-width: 50%;
+            max-height: 100%;
+            flex: 0 0 33.333333%;
+            background-color:#DF433F;
+        }    
+    }
+    .floaty-label{
+        flex: 0 0 100%;
+        color: rgb(133, 173, 101);
+        span{
+            color: rgb(186, 223, 63);
+        }
+    }
+}
+
+.floaty:hover{
+    opacity: 1;
+}

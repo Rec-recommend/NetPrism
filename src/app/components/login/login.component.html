@@ -1,5 +1,7 @@
-<div>
-    <label>user id</label>
-    <input type="text" [formControl]="userId">
-    <button (click)="onSubmit()" class="btn btn-primary">Login</button>
+<div class="floaty">
+        <div class="floaty-label">Current user: <span>{{currentUser}}</span></div>
+        <div class="cont">
+            <input class="floaty-input" type="number" [formControl]="userId" placeholder="USER ID">
+            <button (click)="onSubmit()" class="floaty-btn">Login</button>
+        </div>
 </div>
